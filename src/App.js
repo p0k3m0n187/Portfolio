@@ -21,7 +21,7 @@ const theme = createTheme({
           height: "100vh",
           textAlign: "center",
           overflowX: "hidden",
-          backgroundColor: "black",
+          background: "black",
         },
       },
     },
@@ -34,32 +34,6 @@ const Wrapper = styled("div")({
   margin: "0 auto",
   boxSizing: "border-box",
 });
-
-// Styled container for background shapes
-// const ShapesContainer = styled("div")({
-//   position: "absolute",
-//   top: 0,
-//   left: 0,
-//   width: "100%",
-//   height: "100vh",
-//   zIndex: -1, // Ensure it stays behind the content
-//   pointerEvents: "none", // Prevent shapes from blocking clicks
-// });
-
-// Example Shape
-// const Shape = styled("div")(({ top, left, size, color }) => ({
-//   position: "absolute",
-//   top: top,
-//   left: left,
-//   width: size,
-//   height: size,
-//   backgroundColor: `rgba(${color}, 0.1)`, // Add transparency (30%)
-//   borderRadius: "50%", // Makes it a circle
-//   // opacity: 1, // Set opacity to 1 to avoid affecting the whole element
-//   backdropFilter: "blur(5px)",
-//   WebkitBackdropFilter: "blur(5px)",
-// }));
-
 
 function App() {
   // Create refs for each section
@@ -77,13 +51,6 @@ function App() {
         contactsRef={contactsRef}
       />
       <CssBaseline />
-
-      {/* Background Shapes
-      <ShapesContainer>
-        <Shape top="10%" left="20%" size="100px" color="red" />
-        <Shape top="50%" left="70%" size="150px" color="blue" />
-        <Shape top="80%" left="40%" size="120px" color="green" />
-      </ShapesContainer> */}
 
       <Wrapper>
         <div ref={homeRef}>
