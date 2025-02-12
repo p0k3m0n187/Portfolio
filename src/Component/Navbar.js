@@ -54,7 +54,7 @@ export default function Navbar({ homeRef, aboutRef, projectsRef, contactsRef }) 
                             key={item.name}
                             onClick={() => handleClick(item.name, item.ref)}
                             sx={{
-                                color: selected === item.name ? "green" : 'white',
+                                color: selected === item.name ? "#75178B" : 'white',
                                 textDecoration: selected === item.name ? "underline" : "none", // ✅ Add underline
                                 fontWeight: selected === item.name ? "bold" : "normal", // Optional: Highlight selected
                                 transition: "transform 0.3s ease, text-decoration 0.3s ease",

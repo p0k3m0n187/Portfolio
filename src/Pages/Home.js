@@ -1,10 +1,14 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import ComGif from "../Images/Computer.gif";
 import { TypeAnimation } from "react-type-animation";
-import AnimateIntro from "../Component/Animation/animation"
-import ButtonAnimated from "../Component/Animation/buttonanimation";
+import AnimateIntro from "../Component/atom/Animation/animation"
+// import ButtonAnimated from "../Component/Animation/buttonanimation";
+// import Gitphoto from "../Images/Github.png";
 // import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import Contactbutton from "../Component/molecules/contactbutton";
+import TiltButton from "../Component/atom/TiltButton";
+// import RotatingImage from "../Component/atom/RotatingImage";
+import IntroImage from "../Component/molecules/IntroImage";
 
 function Home() {
     return (
@@ -54,7 +58,7 @@ function Home() {
                                 Developer
                             </Typography>
                         </Box>
-                        <Box
+                        {/* <Box
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
@@ -62,8 +66,8 @@ function Home() {
                                 fontSize: 85,
                             }}
                         >
-                            🚀
-                        </Box>
+                            <RotatingImage />
+                        </Box> */}
                     </Box>
                     {/* Typing Animation */}
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: "flex-start" }}>
@@ -71,7 +75,7 @@ function Home() {
                             <Typography variant="h5" fontWeight="bold">
                                 <TypeAnimation
                                     sequence={[
-                                        "Crafting Interactive & Scalable Web Experiences", 100 // Text and delay, 
+                                        "Crafting Interactive & Scalable Web Experiences", 50 // Text and delay, 
                                     ]}
                                     speed={30}  // Speed of typing
                                     typingDelay={5}  // Optional delay before starting to type
@@ -79,73 +83,56 @@ function Home() {
                             </Typography>
                         </Box>
 
-                        {/* Subtext */}
-                        <AnimateIntro
-                            WordHere="Specializing in React.js, Material-UI, and full-stack web development."
-                            aniduration={1.2}
-                            aniease="easeInOut"
-                            anidelay={1.5}
-                        />
-
-                        <AnimateIntro
-                            WordHere="build modern, efficient, and user-friendly applications."
-                            aniduration={1.2}
-                            aniease="easeInOut"
-                            anidelay={2.5}
-                        />
-
-                        <Box sx={{ display: 'flex', gap: 1 }}>
-                            {/* <Box
-                                sx={{
-                                    border: "2px solid white",
-                                    borderRadius: "50%",
-                                    width: "35px",
-                                    height: "35px",
-                                    backgroundColor: "#8E1DA1", // Correct background color
-                                }}
-                            >
-                            </Box> */}
-
-                            <ButtonAnimated
-                                text="F"
+                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: "flex-start", mt: 1 }}>
+                            <AnimateIntro
+                                WordHere="Specializing in React.js, Material-UI, and full-stack web development."
                                 aniduration={1.2}
                                 aniease="easeInOut"
-                                anidelay={3}
+                                anidelay={1.5}
                             />
 
-                            <ButtonAnimated
-                                text="F"
+                            <AnimateIntro
+                                WordHere="build modern, efficient, and user-friendly applications."
                                 aniduration={1.2}
                                 aniease="easeInOut"
-                                anidelay={3.5}
-                            />
-
-                            <ButtonAnimated
-                                text="F"
-                                aniduration={1.2}
-                                aniease="easeInOut"
-                                anidelay={4.2}
+                                anidelay={2.5}
                             />
                         </Box>
 
+                        <Contactbutton />
+
                         <Box sx={{ display: "flex", gap: 2, mt: 3 }}>
-                            <Button variant="outlined" color="secondary">
+                            {/* <Button
+                                variant="outlined"
+                                color="secondary"
+                                sx={{
+                                    "&:hover": {
+                                        backgroundColor: "#75178B", // Darker shade on hover
+                                        color: "white",
+                                        border: "2px solid white",
+                                        transform: "scale(1.1)", // Slightly enlarge
+                                    },
+                                }}
+                            >
                                 Download CV
-                            </Button>
+                            </Button> */}
+                            <TiltButton />
                         </Box>
                     </Box>
                 </Box>
 
                 {/* Right Content - Image */}
                 <Box>
-                    <img
-                        src={ComGif}
-                        alt="Graduation ceremony of Lawrence"
+                    {/* <img
+                        // src={ComGif}
+                        alt="Gif"
                         style={{
                             width: "250px",
                             height: "250px",
                         }}
-                    />
+                    /> */}
+
+                    <IntroImage />
                 </Box>
             </Box>
         </Box>
