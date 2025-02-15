@@ -2,12 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import AnimateIntro from "../Component/atom/Animation/animation"
-// import ButtonAnimated from "../Component/Animation/buttonanimation";
-// import Gitphoto from "../Images/Github.png";
-// import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import Contactbutton from "../Component/molecules/contactbutton";
 import TiltButton from "../Component/atom/TiltButton";
-// import RotatingImage from "../Component/atom/RotatingImage";
 import IntroImage from "../Component/molecules/IntroImage";
 
 function Home() {
@@ -19,7 +15,7 @@ function Home() {
                 paddingTop: "64px",
                 justifyContent: "center",
                 alignItems: "center",
-                height: "100vh",
+                minHeight: "100vh",
                 color: "white",
                 paddingX: 4, // Responsive horizontal padding
             }}
@@ -58,16 +54,6 @@ function Home() {
                                 Developer
                             </Typography>
                         </Box>
-                        {/* <Box
-                            sx={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                fontSize: 85,
-                            }}
-                        >
-                            <RotatingImage />
-                        </Box> */}
                     </Box>
                     {/* Typing Animation */}
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: "flex-start" }}>
@@ -102,20 +88,6 @@ function Home() {
                         <Contactbutton />
 
                         <Box sx={{ display: "flex", gap: 2, mt: 3 }}>
-                            {/* <Button
-                                variant="outlined"
-                                color="secondary"
-                                sx={{
-                                    "&:hover": {
-                                        backgroundColor: "#75178B", // Darker shade on hover
-                                        color: "white",
-                                        border: "2px solid white",
-                                        transform: "scale(1.1)", // Slightly enlarge
-                                    },
-                                }}
-                            >
-                                Download CV
-                            </Button> */}
                             <TiltButton />
                         </Box>
                     </Box>
@@ -123,15 +95,6 @@ function Home() {
 
                 {/* Right Content - Image */}
                 <Box>
-                    {/* <img
-                        // src={ComGif}
-                        alt="Gif"
-                        style={{
-                            width: "250px",
-                            height: "250px",
-                        }}
-                    /> */}
-
                     <IntroImage />
                 </Box>
             </Box>

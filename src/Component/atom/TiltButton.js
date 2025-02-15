@@ -17,7 +17,7 @@ export default function TiltButton() {
             animate={{ x: 0, opacity: 1, rotate: 0 }}
             transition={{ duration: 1, ease: "easeInOut", delay: 3.5 }}
             whileHover={{ rotate: -5, scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 1.9 }}
         >
             <Button
                 onClick={handleClick}
@@ -32,6 +32,8 @@ export default function TiltButton() {
                         backgroundColor: "white",
                         color: "#75178B",
                         border: "2px solid #75178B",
+                        transform: "scale(1.1)",
+                        whileTap: "scale(1.9)"
                     },
                 }}
             >

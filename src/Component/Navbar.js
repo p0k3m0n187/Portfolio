@@ -61,10 +61,13 @@ export default function Navbar({ homeRef, aboutRef, projectsRef, contactsRef }) 
                 sx={{
                     background: scrolled ? "rgba(25, 24, 24, 0.5)" : "none",
                     boxShadow: scrolled ? "0 8px 50px 0 rgba(0, 0, 0, 0.5)" : "none",
+                    backdropFilter: "blur(20px)",
+                    WebkitBackdropFilter: "blur(20px)",
                     top: 0,
                     left: 0,
                     right: 0,
                     transition: "background 0.3s ease, box-shadow 0.3s ease",
+                    // border: scrolled ? "none" : "none",
                 }}
             >
                 <Toolbar sx={{ justifyContent: "center", gap: 3 }}>

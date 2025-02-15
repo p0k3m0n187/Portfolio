@@ -14,12 +14,14 @@ const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        body: {
+        "html, body, #root": { // Ensure all main containers are flex containers
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh", // Ensure it expands beyond viewport if needed
           margin: 0,
           padding: 0,
           boxSizing: "border-box",
           width: "100%",
-          height: "100vh",
           textAlign: "center",
           overflowX: "hidden",
           background: "black",
@@ -36,7 +38,11 @@ const Wrapper = styled("div")({
   margin: "0 auto",
   boxSizing: "border-box",
   position: "relative",
+  // height: "100vh", // Ensure it expands beyond viewport if
   zIndex: 2,
+  flexGrow: 1,
+  display: "flex",
+  flexDirection: "column", // Ensure it behaves properly with flex-grow
 });
 
 function App() {
