@@ -5,28 +5,50 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 
 export default function Navbar({ homeRef, aboutRef, projectsRef, contactsRef }) {
-    const [scrolled, setScrolled] = React.useState(false); // ✅ Track scroll state
-    const [selected, setSelected] = React.useState("Home"); // ✅ Track selected item
+    const [scrolled, setScrolled] = React.useState(false);
+    const [selected, setSelected] = React.useState("home");
 
-    // ✅ Detect scroll and update state
+    // Detect scroll position for navbar styling
     React.useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Update selected section on scroll using IntersectionObserver
+    React.useEffect(() => {
+        const sections = document.querySelectorAll("section[id]");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setSelected(entry.target.id);
+                    }
+                });
+            },
+            { threshold: 0.6 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
+
+    // Navigation items
     const selectionNav = [
-        { name: "Home", ref: homeRef },
-        { name: "About", ref: aboutRef },
-        { name: "Projects", ref: projectsRef },
-        { name: "Contact", ref: contactsRef }
+        { name: "Home", id: "home", ref: homeRef },
+        { name: "About", id: "about", ref: aboutRef },
+        { name: "Projects", id: "projects", ref: projectsRef },
+        { name: "Contact", id: "contact", ref: contactsRef },
     ];
 
-    const handleClick = (name, ref) => {
-        setSelected(name); // ✅ Update selected section
+    // Smooth scroll function
+    const handleClick = (id, ref) => {
+        setSelected(id);
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
@@ -37,30 +59,28 @@ export default function Navbar({ homeRef, aboutRef, projectsRef, contactsRef }) 
             <AppBar
                 position="fixed"
                 sx={{
-                    background: scrolled ? "rgba( 25, 24, 24, .5 )" : "none",
+                    background: scrolled ? "rgba(25, 24, 24, 0.5)" : "none",
                     boxShadow: scrolled ? "0 8px 50px 0 rgba(0, 0, 0, 0.5)" : "none",
-                    // backdropFilter: "blur(51px)",
-                    // WebkitBackdropFilter: "blur(12px)",
                     top: 0,
                     left: 0,
                     right: 0,
                     transition: "background 0.3s ease, box-shadow 0.3s ease",
-                    border: scrolled ? "none" : "none",
                 }}
             >
                 <Toolbar sx={{ justifyContent: "center", gap: 3 }}>
                     {selectionNav.map((item) => (
                         <Button
-                            key={item.name}
-                            onClick={() => handleClick(item.name, item.ref)}
+                            key={item.id}
+                            onClick={() => handleClick(item.id, item.ref)}
                             sx={{
-                                color: selected === item.name ? "#75178B" : 'white',
-                                textDecoration: selected === item.name ? "underline" : "none", // ✅ Add underline
-                                fontWeight: selected === item.name ? "bold" : "normal", // Optional: Highlight selected
+                                fontSize: "1.2rem",
+                                color: selected === item.id ? "#D96CF1FF" : "white",
+                                textDecoration: selected === item.id ? "underline" : "none",
+                                fontWeight: selected === item.id ? "bold" : "normal",
                                 transition: "transform 0.3s ease, text-decoration 0.3s ease",
                                 "&:hover": {
                                     transform: "scale(1.1)",
-                                    textDecoration: selected === item.name ? "underline" : "none",
+                                    textDecoration: "underline",
                                 },
                             }}
                         >

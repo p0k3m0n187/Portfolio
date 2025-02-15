@@ -2,21 +2,25 @@ import { motion } from "framer-motion";
 import { Button } from "@mui/material";
 
 export default function TiltButton() {
+    const handleClick = () => {
+        const link = document.createElement("a");
+        link.href = "/REGISTRADO_RESUME.pdf"; // ✅ File must be in the "public" folder
+        link.download = "REGISTRADO_RESUME.pdf"; // ✅ Force download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <motion.div
-            initial={{ x: -100, opacity: 0, rotate: 0 }}  // Start off-screen, no rotation
-            animate={{ x: 0, opacity: 1, rotate: 0 }}   // Reset rotation when not hovered
-            transition={{   duration: 1, ease: "easeInOut", delay: 3.5 }} // Smooth initial animation
-
-            whileHover={{
-                rotate: -5,  // Tilt effect on hover
-                scale: 1.1,  // Slightly enlarge
-            }}
-            whileTap={{ scale: 0.9 }} // Click effect (optional)
-            // transition={{ duration: 1.2, ease: "easeInOut", delay: 3.7 }} // Smooth initial animation
-
+            initial={{ x: -100, opacity: 0, rotate: 0 }}
+            animate={{ x: 0, opacity: 1, rotate: 0 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 3.5 }}
+            whileHover={{ rotate: -5, scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
         >
             <Button
+                onClick={handleClick}
                 variant="outlined"
                 color="secondary"
                 sx={{
@@ -25,7 +29,7 @@ export default function TiltButton() {
                     color: "white",
                     fontWeight: 700,
                     "&:hover": {
-                        backgroundColor: "white", // Darker shade on hover
+                        backgroundColor: "white",
                         color: "#75178B",
                         border: "2px solid #75178B",
                     },

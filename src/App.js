@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contacts from "./Pages/Contacts";
 import { useRef } from "react";
+import BackgrndAni from "./Component/atom/AnimationBckground";
 
 // Create the theme with custom styles
 const theme = createTheme({
@@ -22,17 +23,20 @@ const theme = createTheme({
           textAlign: "center",
           overflowX: "hidden",
           background: "black",
+          position: "relative",
         },
       },
     },
   },
 });
 
-// Create the Wrapper component for content layout
+// Styled Wrapper for content layout
 const Wrapper = styled("div")({
   width: "55vw",
   margin: "0 auto",
   boxSizing: "border-box",
+  position: "relative",
+  zIndex: 2,
 });
 
 function App() {
@@ -44,6 +48,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <BackgrndAni />
       <Navbar
         homeRef={homeRef}
         aboutRef={aboutRef}
@@ -52,19 +57,20 @@ function App() {
       />
       <CssBaseline />
 
+      {/* Sections with IDs for IntersectionObserver */}
       <Wrapper>
-        <div ref={homeRef}>
+        <section id="home" ref={homeRef}>
           <Home />
-        </div>
-        <div ref={aboutRef}>
+        </section>
+        <section id="about" ref={aboutRef}>
           <About />
-        </div>
-        <div ref={projectsRef}>
+        </section>
+        <section id="projects" ref={projectsRef}>
           <Projects />
-        </div>
-        <div ref={contactsRef}>
+        </section>
+        <section id="contact" ref={contactsRef}>
           <Contacts />
-        </div>
+        </section>
       </Wrapper>
     </ThemeProvider>
   );
