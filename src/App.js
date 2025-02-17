@@ -7,7 +7,7 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contacts from "./Pages/Contacts";
 import { useRef } from "react";
-import BackgrndAni from "./Component/atom/AnimationBckground";
+import BackgrndAni from "./Component/atom/Animation/bganimation/AnimationBckground";
 
 // Create the theme with custom styles
 const theme = createTheme({

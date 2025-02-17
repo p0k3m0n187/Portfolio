@@ -1,10 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
-function SkillContainer({ images }) { // ✅ Fix typo: "imgages" → "images"
+function SkillContainer({ images, label }) { // ✅ Fix typo: "imgages" → "images"
     return (
         <Box
             sx={{
+                display: 'flex',
                 background: "rgba(255, 255, 255, 0.25)",
                 boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
                 backdropFilter: "blur(0.5px)",
@@ -13,6 +14,8 @@ function SkillContainer({ images }) { // ✅ Fix typo: "imgages" → "images"
                 textAlign: "center",
                 border: "2px solid white",
                 padding: "10px",
+                gap: 1,
+                flexWrap: 'warp',
                 transition: "all 0.3s ease-in-out", // Smooth transition
                 "&:hover": {
                     background: "transparent",
@@ -24,15 +27,20 @@ function SkillContainer({ images }) { // ✅ Fix typo: "imgages" → "images"
                 },
             }}
         >
-            <img
-                src={images}
-                alt="Skill Icon"
-                style={{
-                    width: "40px",  // ✅ Adjust image size properly
-                    height: "auto",
-                    // objectFit: "contain",
-                }}
-            />
+            <Box>
+                <img
+                    src={images}
+                    alt="Skill Icon"
+                    style={{
+                        width: "40px",  // ✅ Adjust image size properly
+                        height: "auto",
+                        // objectFit: "contain",
+                    }}
+                />
+            </Box>
+            <Box sx={{ alignContent: 'center' }}>
+                <Typography variant="h6" >{label}</Typography>
+            </Box>
         </Box>
     );
 }
