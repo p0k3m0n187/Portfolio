@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
+import ProjCont from "../Component/molecules/ProjCont";
 
 function Projects() {
     const [activeTab, setActiveTab] = useState("projects"); // Tracks active section
@@ -43,7 +44,7 @@ function Projects() {
                     borderRadius: "5px",
                     border: "1px solid rgba(255, 255, 255, 0.10)",
                     height: "70px",
-                    width: "100%",
+                    width: "80%",
                 }}
             >
                 <Button
@@ -51,11 +52,13 @@ function Projects() {
                     sx={{
                         flexGrow: 1,
                         minWidth: 0,
-                        color: activeTab === "projects" ? "white" : "none",
-                        // borderBottom: activeTab === "projects" ? "3px solid yellow" : "none",
-                        border: activeTab === "projects" ? "1px solid white" : 'none',
+                        color: activeTab === "projects" ? "#843fdd" : "white",
+                        backgroundColor: activeTab === "projects" ? "white" : 'none',
+                        borderBottom: activeTab === "projects" ? "5px solid #843fdd" : 'none',
+                        borderTop: activeTab === "projects" ? "1px solid #843fdd" : 'none',
+                        borderRight: activeTab === "projects" ? "1px solid #843fdd" : 'none',
+                        borderLeft: activeTab === "projects" ? "1px solid #843fdd" : 'none',
                         transition: "all 0.3s ease-in-out",
-                        backgroundColor: activeTab === "projects" ? 'rgba(255, 255, 255, 0.1)' : 'transparent'
                     }}
                 >
                     Projects
@@ -66,9 +69,13 @@ function Projects() {
                     sx={{
                         flexGrow: 1,
                         minWidth: 0,
-                        color: activeTab === "skills" ? "white" : "none",
-                        // borderBottom: activeTab === "skills" ? "3px solid yellow" : "none",
-                        border: activeTab === "skills" ? "1px solid white" : 'none',
+                        textDecoration: activeTab === "skills" ? "underline" : "none",
+                        backgroundColor: activeTab === "skills" ? "white" : 'none',
+                        color: activeTab === "skills" ? "#843fdd" : "white",
+                        borderBottom: activeTab === "skills" ? "5px solid #843fdd" : 'none',
+                        borderTop: activeTab === "skills" ? "1px solid #843fdd" : 'none',
+                        borderRight: activeTab === "skills" ? "1px solid #843fdd" : 'none',
+                        borderLeft: activeTab === "skills" ? "1px solid #843fdd" : 'none',
                         transition: "all 0.3s ease-in-out",
                     }}
                 >
@@ -79,17 +86,19 @@ function Projects() {
             {/* Content Sections */}
             <Box
                 sx={{
-                    width: "95%",
+                    width: "100%",
+                    flexGrow: 1,
+                    minHeight: "500px",
                     marginTop: 5,
-                    padding: 3,
-                    border: "2px solid white",
-                    borderRadius: "10px",
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
                     textAlign: "center",
+                    display: "flex", // Enable flexbox
+                    justifyContent: "center", // Center horizontally
+                    alignItems: "center", // Center vertically
+                    mb: 10,
                 }}
             >
                 {activeTab === "projects" ? (
-                    <Typography variant="h5">Here are my projects...</Typography>
+                    <ProjCont />
                 ) : (
                     <Typography variant="h5">Here are my skills...</Typography>
                 )}

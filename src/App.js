@@ -8,16 +8,17 @@ import Projects from "./Pages/Projects";
 import Contacts from "./Pages/Contacts";
 import { useRef } from "react";
 import BackgrndAni from "./Component/atom/Animation/bganimation/AnimationBckground";
+import { motion } from "framer-motion"; // Import motion for animations
 
 // Create the theme with custom styles
 const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        "html, body, #root": { // Ensure all main containers are flex containers
+        "html, body, #root": {
           display: "flex",
           flexDirection: "column",
-          height: "100vh", // Ensure it expands beyond viewport if needed
+          height: "100vh",
           margin: 0,
           padding: 0,
           boxSizing: "border-box",
@@ -38,11 +39,10 @@ const Wrapper = styled("div")({
   margin: "0 auto",
   boxSizing: "border-box",
   position: "relative",
-  // height: "100vh", // Ensure it expands beyond viewport if
   zIndex: 2,
   flexGrow: 1,
   display: "flex",
-  flexDirection: "column", // Ensure it behaves properly with flex-grow
+  flexDirection: "column",
 });
 
 function App() {
@@ -66,16 +66,44 @@ function App() {
       {/* Sections with IDs for IntersectionObserver */}
       <Wrapper>
         <section id="home" ref={homeRef}>
-          <Home />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}  // Ensures the animation triggers every time it enters view
+            transition={{ duration: 0.6, type: "spring" }}
+          >
+            <Home />
+          </motion.div>
         </section>
         <section id="about" ref={aboutRef}>
-          <About />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}  // Ensures the animation triggers every time it enters view
+            transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+          >
+            <About />
+          </motion.div>
         </section>
         <section id="projects" ref={projectsRef}>
-          <Projects />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}  // Ensures the animation triggers every time it enters view
+            transition={{ duration: 0.6, delay: 0.4, type: "spring" }}
+          >
+            <Projects />
+          </motion.div>
         </section>
         <section id="contact" ref={contactsRef}>
-          <Contacts />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}  // Ensures the animation triggers every time it enters view
+            transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
+          >
+            <Contacts />
+          </motion.div>
         </section>
       </Wrapper>
     </ThemeProvider>
