@@ -23,7 +23,7 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                 borderRadius: '5px',
                 textAlign: 'center',
                 "&:hover": { // Correct syntax for hover state
-                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    // backgroundColor: "rgba(255, 255, 255, 0.5)",
                     cursor: "pointer",
                     transition: "background-color 0.3s ease-in-out",
                     transform: "scale(1.05)",
@@ -42,9 +42,15 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                         alt=''
                         width='320px'
                         height='250px'
-                        style={{ objectFit: 'cover' }} // cover image in full size
+                        style={{
+                            // objectFit: 'cover',  
+                            border: '2px solid white',
+                            borderRadius: '5px',
+                            marginBottom: 10,
+                        }} // cover image in full size
 
                     />
+
                 </Box>
                 <Box
                     sx={{
@@ -63,14 +69,19 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                     >
                         {projName}
                     </Typography>
-                    <Typography>
-                        {projDesc}
-                    </Typography>
+                    <Box sx={{ padding: 2, maxHeight: '100px' }}>
+                        <Typography sx={{
+                            flexWrap: 'wrap',
+                            width: '320px'
+                        }}>
+                            {projDesc}
+                        </Typography>
+                    </Box>
 
                     <Box sx={{
                         display: 'flex',
                         justifyContent: 'flex-end',
-                        mt: 5
+                        mt: 5,
                     }}>
                         <Button>
                             View Project
