@@ -8,7 +8,7 @@ import BothPhoto from '../../Images/Both.png';
 
 function ProjCont() {
     return (
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: "100%", mb: 5 }}>
             <Grid2
                 container
                 spacing={2}

@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import ProjCont from "../Component/molecules/ProjCont";
+import ProjectSkills from "../Component/molecules/ProjectSkills";
 
 function Projects() {
     const [activeTab, setActiveTab] = useState("projects"); // Tracks active section
@@ -93,14 +94,15 @@ function Projects() {
                     textAlign: "center",
                     display: "flex", // Enable flexbox
                     justifyContent: "center", // Center horizontally
-                    alignItems: "center", // Center vertically
+                    // alignItems: "center", // Center vertically
                     mb: 10,
                 }}
             >
                 {activeTab === "projects" ? (
                     <ProjCont />
                 ) : (
-                    <Typography variant="h5">Here are my skills...</Typography>
+                    // <Typography variant="h5">Here are my skills...</Typography>
+                    <ProjectSkills />
                 )}
             </Box>
         </Box>
