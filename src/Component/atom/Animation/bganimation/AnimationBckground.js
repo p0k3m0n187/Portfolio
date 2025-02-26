@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./backgrndAni.css";
 
 function AnimationBckground() {
-    useEffect(() => {
-        console.log("BackgrndAni loaded");
-    }, []);
+    // useEffect(() => {
+    //     console.log("BackgrndAni loaded");
+    // }, []);
 
     return (
         <div className="background">

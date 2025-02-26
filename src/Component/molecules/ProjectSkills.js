@@ -6,6 +6,18 @@ import ImgReact from '../../Images/REACT.png';
 import cssImg from '../../Images/CSS.png';
 import imgJS from '../../Images/JScript.png';
 import fbImg from '../../Images/Firebase.png';
+import lrvlImg from '../../Images/laravel.png';
+import pyhtImg from '../../Images/python.png';
+import imgGit from '../../Images/Git_icon.svg.png';
+import btstrapImg from '../../Images/bootstrap.png';
+import wrdpresImg from '../../Images/wordpress.png';
+import rstapi from '../../Images/restapi.png';
+import jvaImg from '../../Images/Java-Logo.jpg';
+import anguImg from '../../Images/angular.png';
+import phpImg from '../../Images/php.png';
+import csharpImg from '../../Images/Csharp.png';
+import cplusImg from '../../Images/cplus.png';
+import kotImg from '../../Images/kotlin.png';
 
 function ProjectSkills() {
     return (
@@ -28,7 +40,7 @@ function ProjectSkills() {
             <PrjSklCont
                 img={ImgReact}
                 name='React'
-                barColor='white'
+                barColor='#07B8C5FF'
                 rating={80}
             />
             <PrjSklCont
@@ -40,79 +52,79 @@ function ProjectSkills() {
             <PrjSklCont
                 img={fbImg}
                 name='Firebase'
-                barColor='green'
+                barColor='#F59A33FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={lrvlImg}
                 name='Laravel'
-                barColor='green'
+                barColor='red'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={pyhtImg}
                 name='Python'
-                barColor='green'
+                barColor='#7B48F3FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={btstrapImg}
                 name='Bootstrap'
-                barColor='green'
+                barColor='#640591FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={imgGit}
                 name='Git'
-                barColor='green'
+                barColor='#F86E38FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={wrdpresImg}
                 name='Wordpress'
-                barColor='green'
+                barColor='#044F81FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={rstapi}
                 name="RESTApi's"
-                barColor='green'
+                barColor='#55EBF0FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={jvaImg}
                 name="Java"
-                barColor='green'
+                barColor='#F59A33FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={anguImg}
                 name="Angular"
-                barColor='green'
+                barColor='red'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={phpImg}
                 name="PHP"
-                barColor='green'
+                barColor='#817E7BFF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={csharpImg}
                 name="C#"
-                barColor='green'
+                barColor='#640591FF'
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={cplusImg}
                 name="C++"
-                barColor='green'
+                barColor="linear-gradient(341deg, rgba(76,102,233,1) 3%, rgba(252,91,70,1) 46%, rgba(159,87,173,1) 75%, rgba(76,102,233,1) 92%)"
                 rating={80}
             />
             <PrjSklCont
-                img={fbImg}
+                img={kotImg}
                 name="Kotlin"
-                barColor='green'
+                barColor='#F5914FFF'
                 rating={80}
             />
         </Box>
