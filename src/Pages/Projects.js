@@ -23,10 +23,12 @@ function Projects() {
             <Box sx={{ margin: 10 }}>
                 <Typography
                     variant="h3"
-                    fontWeight="1000"
+                    fontWeight="900"
                     sx={{
                         background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
+                        // background: '#7DF9FF',
                         WebkitBackgroundClip: "text",
+                        WebkitTextStroke: "0.5px white", // White stroke
                         color: "transparent",
                     }}
                 >

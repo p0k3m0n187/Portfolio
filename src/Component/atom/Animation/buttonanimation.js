@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { Box, } from '@mui/material';
-function buttonanimation({ text, aniduration, aniease, anidelay = 0, bttnImage, link }) {
+function buttonanimation({ aniduration, aniease, anidelay = 0, bttnImage, link }) {
     const handleClick = () => {
         // Open the link in a new tab
         window.open(link, '_blank');
