@@ -38,27 +38,27 @@ function Home() {
                         display: "flex",
                         gap: 3
                     }}>
-                        <Box>
-                            <Typography variant="h3" fontWeight="700" color="white">
+                        <Box sx={{ textAlign: "left" }}>  {/* Ensures the inner Box also aligns text to the left */}
+                            <Typography variant="h1" color="white">
                                 Frontend
                             </Typography>
                             <Typography
-                                variant="h3"
-                                fontWeight="1000"
+                                variant="h1"
                                 sx={{
                                     background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
-                                    WebkitBackgroundClip: "text",  // Clips the background to the text
-                                    color: "transparent",  // Make text color transparent so that the gradient shows
+                                    WebkitBackgroundClip: "text",
+                                    color: "transparent",
                                 }}
                             >
                                 Developer
                             </Typography>
                         </Box>
                     </Box>
+
                     {/* Typing Animation */}
                     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: "flex-start" }}>
                         <Box sx={{ marginTop: 2 }}>
-                            <Typography variant="h5" fontWeight="bold">
+                            <Typography fontSize={'1.7rem'} fontWeight="bold">
                                 <TypeAnimation
                                     sequence={[
                                         "Crafting Interactive & Scalable Web Experiences", 50 // Text and delay, 

@@ -21,12 +21,13 @@ function About() {
             <Box mb={2}>
                 <Box sx={{ margin: 10 }}>
                     <Typography
-                        variant="h3"
-                        fontWeight="1000"
+                        variant="h1"
                         sx={{
                             background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
-                            WebkitBackgroundClip: "text",  // Clips the background to the text
-                            color: "transparent",  // Make text color transparent so that the gradient shows
+                            // background: '#7DF9FF',
+                            WebkitBackgroundClip: "text",
+                            WebkitTextStroke: "0.5px white", // White stroke
+                            color: "transparent",
                         }}
                     >
                         About Me
@@ -46,20 +47,22 @@ function About() {
                 >
                     {/* Left Section */}
                     <Box sx={{ textAlign: 'start', flex: 1, minWidth: "25px" }}>
-                        <Typography mb={1} variant='h4' color='white'>Hello! I'm</Typography>
-                        <Typography
-                            mb={2}
-                            variant='h3'
-                            color='white'
-                            fontWeight="700"
+                        <Typography mb={1} fontSize={'2rem'}>Hello! I'm</Typography>
+                        <Typography gutterBottom
+                            variant="h1"
                             sx={{
                                 background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
-                                WebkitBackgroundClip: "text",  // Clips the background to the text
-                                color: "transparent",  // Make text color transparent so that the gradient shows
-                            }}>
-                            Lawrence Dave G. Registrado</Typography>
-                        <Typography variant='h7' color='white'>
-                            Hi, I’m Lawrence Dave Registrado, a passionate Software Developer and Data Analyst with
+                                // background: '#7DF9FF',
+                                WebkitBackgroundClip: "text",
+                                // WebkitTextStroke: "0.5px white", // White stroke
+                                color: "transparent",
+                                fontSize: "2.5rem",
+                            }}
+                        >
+                            Lawrence Dave G. Registrado
+                        </Typography>
+                        <Typography>
+                            A passionate Software Developer and Data Analyst with
                             experience in front-end and back-end development, quality assurance testing, and data
                             analysis. I love building efficient and user-friendly applications while ensuring top-notch performance
                             and reliability.

@@ -59,8 +59,8 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                         height: '100%',
                     }}>
                     <Typography gutterBottom
-                        variant="h5"
-                        fontWeight="1000"
+                        variant="h1"
+                        fontSize={'2.5rem'}
                         sx={{
                             background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
                             WebkitBackgroundClip: "text",
@@ -83,9 +83,33 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                         justifyContent: 'flex-end',
                         mt: 5,
                     }}>
-                        <Button>
+                        <Button
+                            sx={{
+                                background: "linear-gradient(90deg, #3E41A7 0%, #8E1DA1 100%)",
+                                color: "#fff",
+                                fontWeight: "bold",
+                                padding: "12px 24px",
+                                fontSize: "1rem",
+                                textTransform: "none",
+                                borderRadius: "8px",
+                                transition: "all 0.3s ease-in-out",
+                                boxShadow: "0px 4px 10px rgba(142, 29, 161, 0.3)",
+
+                                "&:hover": {
+                                    background: "linear-gradient(90deg, #8E1DA1 0%, #3E41A7 100%)",
+                                    transform: "scale(1.05)",
+                                    boxShadow: "0px 6px 14px rgba(142, 29, 161, 0.4)",
+                                },
+
+                                "&:active": {
+                                    transform: "scale(0.98)",
+                                    boxShadow: "0px 3px 8px rgba(142, 29, 161, 0.2)",
+                                },
+                            }}
+                        >
                             View Project
                         </Button>
+
                     </Box>
                 </Box>
             </Box>

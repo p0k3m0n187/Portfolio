@@ -79,7 +79,7 @@ export default function Navbar({ homeRef, aboutRef, projectsRef, contactsRef }) 
                                 fontSize: "1.2rem",
                                 color: selected === item.id ? "#D96CF1FF" : "white",
                                 textDecoration: selected === item.id ? "underline" : "none",
-                                fontWeight: selected === item.id ? "bold" : "normal",
+                                fontWeight: selected === item.id ? "900" : "normal",
                                 transition: "transform 0.3s ease, text-decoration 0.3s ease",
                                 "&:hover": {
                                     transform: "scale(1.1)",

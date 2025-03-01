@@ -12,6 +12,15 @@ import { motion } from "framer-motion"; // Import motion for animations
 
 // Create the theme with custom styles
 const theme = createTheme({
+  typography: {
+    fontFamily: "'Roboto', sans-serif",
+    h1: {
+      fontFamily: "'Poppins', sans-serif", // Example: Different font for headers
+      fontWeight: 900,
+      fontSize: 80,
+    },
+  },
+
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -27,6 +36,7 @@ const theme = createTheme({
           overflowX: "hidden",
           background: "black",
           position: "relative",
+          fontFamily: "'Poppins', sans-serif", // Ensure the body also applies the font
         },
       },
     },
@@ -70,7 +80,7 @@ function App() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}  // Ensures the animation triggers every time it enters view
-            transition={{ duration: 0.6, type: "spring" }}
+            transition={{ duration: 0.6, delay: 1, type: "spring" }}
           >
             <Home />
           </motion.div>
@@ -80,7 +90,7 @@ function App() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}  // Ensures the animation triggers every time it enters view
-            transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+            transition={{ duration: 0.6, delay: 0.4, type: "spring" }}
           >
             <About />
           </motion.div>
