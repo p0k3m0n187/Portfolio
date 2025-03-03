@@ -29,13 +29,13 @@ function ProjectSkills() {
                 img={htmlPic}
                 name='HTML'
                 barColor="#F74922FF"
-                rating={72}
+                rating={85}
             />
             <PrjSklCont
                 img={cssImg}
                 name='CSS'
                 barColor="blue"
-                rating={72}
+                rating={82}
             />
             <PrjSklCont
                 img={ImgReact}
@@ -47,85 +47,85 @@ function ProjectSkills() {
                 img={imgJS}
                 name='JavaScript'
                 barColor='yellow'
-                rating={80}
+                rating={85}
             />
             <PrjSklCont
                 img={fbImg}
                 name='Firebase'
                 barColor='#F59A33FF'
-                rating={80}
+                rating={78}
             />
             <PrjSklCont
                 img={lrvlImg}
                 name='Laravel'
                 barColor='red'
-                rating={80}
+                rating={75}
             />
             <PrjSklCont
                 img={pyhtImg}
                 name='Python'
                 barColor='#7B48F3FF'
-                rating={80}
+                rating={70}
             />
             <PrjSklCont
                 img={btstrapImg}
                 name='Bootstrap'
                 barColor='#640591FF'
-                rating={80}
+                rating={78}
             />
             <PrjSklCont
                 img={imgGit}
                 name='Git'
                 barColor='#F86E38FF'
-                rating={80}
+                rating={85}
             />
             <PrjSklCont
                 img={wrdpresImg}
                 name='Wordpress'
                 barColor='#044F81FF'
-                rating={80}
+                rating={75}
             />
             <PrjSklCont
                 img={rstapi}
                 name="RESTApi's"
                 barColor='#55EBF0FF'
-                rating={80}
+                rating={85}
             />
             <PrjSklCont
                 img={jvaImg}
                 name="Java"
                 barColor='#F59A33FF'
-                rating={80}
+                rating={81}
             />
             <PrjSklCont
                 img={anguImg}
                 name="Angular"
                 barColor='red'
-                rating={80}
+                rating={83}
             />
             <PrjSklCont
                 img={phpImg}
                 name="PHP"
                 barColor='#817E7BFF'
-                rating={80}
+                rating={72}
             />
             <PrjSklCont
                 img={csharpImg}
                 name="C#"
                 barColor='#640591FF'
-                rating={80}
+                rating={70}
             />
             <PrjSklCont
                 img={cplusImg}
                 name="C++"
                 barColor="linear-gradient(341deg, rgba(76,102,233,1) 3%, rgba(252,91,70,1) 46%, rgba(159,87,173,1) 75%, rgba(76,102,233,1) 92%)"
-                rating={80}
+                rating={70}
             />
             <PrjSklCont
                 img={kotImg}
                 name="Kotlin"
                 barColor='#F5914FFF'
-                rating={80}
+                rating={70}
             />
         </Box>
     )

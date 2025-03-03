@@ -40,14 +40,6 @@ function ProjCont() {
                         aniDelay={0.3}
                     />
                 </Grid2>
-                {/* <Grid2 xs={12} md={4}>
-                    <ProjBox
-                        projImg={GradPic}
-                        projName="Hotdog"
-                        projDesc=""
-                        aniDelay={0.6}
-                    />
-                </Grid2> */}
             </Grid2>
         </Box>
     );

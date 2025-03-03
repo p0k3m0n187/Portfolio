@@ -1,8 +1,14 @@
 import { Box, Button, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion"; // Import motion from framer-motion
+import Projctmodal from './Projctmodal';
 
 function ProjBox({ projName, projDesc, projImg, aniDelay }) {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}  // Start with opacity 0 and move up
@@ -40,10 +46,9 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                     <img
                         src={projImg}
                         alt=''
-                        width='320px'
-                        height='250px'
+                        width='300px'
+                        height='200px'
                         style={{
-                            // objectFit: 'cover',  
                             border: '2px solid white',
                             borderRadius: '5px',
                             marginBottom: 10,
@@ -84,6 +89,7 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                         mt: 5,
                     }}>
                         <Button
+                            onClick={handleOpen}
                             sx={{
                                 background: "linear-gradient(90deg, #3E41A7 0%, #8E1DA1 100%)",
                                 color: "#fff",
@@ -109,10 +115,10 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                         >
                             View Project
                         </Button>
-
                     </Box>
                 </Box>
             </Box>
+            <Projctmodal open={open} handleClose={handleClose} />
         </motion.div>
     )
 }

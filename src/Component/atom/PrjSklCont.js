@@ -69,7 +69,7 @@ function PrjSklCont({ img, name, rating, barColor }) {
                         <Typography variant="body1" fontWeight="bold">
                             {name}
                         </Typography>
-                        <Typography variant="body2">{progress}%</Typography>
+                        {/* <Typography variant="body2">{progress}%</Typography> */}
                     </Box>
 
                     {/* Animated Percentage Progress Bar */}
