@@ -18,6 +18,10 @@ const theme = createTheme({
       fontFamily: "'Poppins', sans-serif", // Example: Different font for headers
       fontWeight: 900,
       fontSize: 80,
+      background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextStroke: "0.5px white", // White stroke
+      color: "transparent",
     },
   },
 

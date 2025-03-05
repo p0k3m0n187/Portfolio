@@ -1,9 +1,9 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Grid2, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import Projctmodal from './Projctmodal';
 
-function ProjBox({ projName, projDesc, projImg, aniDelay }) {
+function ProjBox({ projName, projDesc, projImg, aniDelay, techStack, keyFeatures, techImg, projectImages }) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -46,7 +46,7 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                     <img
                         src={projImg}
                         alt=''
-                        width='300px'
+                        width='250px'
                         height='200px'
                         style={{
                             border: '2px solid white',
@@ -65,22 +65,23 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                     }}>
                     <Typography gutterBottom
                         variant="h1"
-                        fontSize={'2.5rem'}
-                        sx={{
-                            background: "linear-gradient(25deg, rgba(62,65,167,1) 26%, rgba(142,29,161,1) 67%)",
-                            WebkitBackgroundClip: "text",
-                            color: "transparent",
-                        }}
+                        fontSize={'2rem'}
+                        fontWeight={900}
                     >
                         {projName}
                     </Typography>
-                    <Box sx={{ padding: 2, maxHeight: '100px' }}>
-                        <Typography sx={{
-                            flexWrap: 'wrap',
-                            width: '320px'
-                        }}>
-                            {projDesc}
-                        </Typography>
+
+                    <Box>
+                        <Grid2 container spacing={1}>
+                            {techImg?.map((tech) => (
+                                <img
+                                    src={tech}
+                                    alt=''
+                                    width='25px'
+                                    height='25px'
+                                />
+                            ))}
+                        </Grid2>
                     </Box>
 
                     <Box sx={{
@@ -118,7 +119,16 @@ function ProjBox({ projName, projDesc, projImg, aniDelay }) {
                     </Box>
                 </Box>
             </Box>
-            <Projctmodal open={open} handleClose={handleClose} />
+            <Projctmodal
+                open={open}
+                handleClose={handleClose}
+                projName={projName}
+                projDesc={projDesc}
+                techStack={techStack}
+                keyFeatures={keyFeatures}
+                projImg={projImg}
+                projectImages={projectImages}
+            />
         </motion.div>
     )
 }
