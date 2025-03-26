@@ -34,8 +34,8 @@ function contContainer({ img, description, delay, link }) {
                         color: "white",
                         border: "2px solid white",
                         borderRadius: "50%",
-                        width: "150px",  // Adjusted for better UI
-                        height: "150px",
+                        width: "120px",  // Adjusted for better UI
+                        height: "120px",
                         backgroundColor: "#8E1DA1",
                         transition: "0.3s ease",
                         mb: 3,
@@ -47,13 +47,15 @@ function contContainer({ img, description, delay, link }) {
                 >
                     <img
                         alt=''
-                        width='50px'
-                        height='50px'
+                        width='35px'
+                        height='35px'
                         src={img}
                     />
                 </Box>
                 <Box>
-                    <Typography>
+                    <Typography sx={{
+                        width: '200px',
+                    }}>
                         {description}
                     </Typography>
                 </Box>

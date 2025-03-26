@@ -14,7 +14,7 @@ function ContBox() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                gap: 7
+                gap: 2
             }}
         >
             <ContContainer

@@ -16,7 +16,7 @@ export default function TiltButton() {
             initial={{ x: -100, opacity: 0, rotate: 0 }}
             animate={{ x: 0, opacity: 1, rotate: 0 }}
             transition={{ duration: 1, ease: "easeInOut", delay: 3.5 }}
-            whileHover={{ rotate: -5, scale: 1.1 }}
+            // whileHover={{ rotate: -5, scale: 1.1 }}
             whileTap={{ scale: 1.9 }}
         >
             {/* <Button

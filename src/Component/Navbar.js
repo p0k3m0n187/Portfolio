@@ -61,8 +61,8 @@ export default function Navbar({ homeRef, aboutRef, projectsRef, contactsRef }) 
                 sx={{
                     background: scrolled ? "rgba(25, 24, 24, 0.5)" : "none",
                     boxShadow: scrolled ? "0 8px 50px 0 rgba(0, 0, 0, 0.5)" : "none",
-                    backdropFilter: "blur(20px)",
-                    WebkitBackdropFilter: "blur(20px)",
+                    backdropFilter: scrolled ? "blur(0px)" : "blur(20px)",
+                    WebkitBackdropFilter: scrolled ? "blur(0px)" : "blur(20px)",
                     top: 0,
                     left: 0,
                     right: 0,
