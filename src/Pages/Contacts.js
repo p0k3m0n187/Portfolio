@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import ContBox from '../Component/molecules/contBox';
+import Emailcont from '../Component/atom/Emailcont';
 
 function Contacts() {
     return (
@@ -17,9 +18,7 @@ function Contacts() {
                     margin: 10
                 }}
             >
-                <Box sx={{
-                    mb: 10
-                }}>
+                <Box>
                     <Typography
                         variant="h1"
                         sx={{
@@ -33,16 +32,7 @@ function Contacts() {
                         Contact
                     </Typography>
                 </Box>
-                <Box sx={{
-                    mb: 15
-                }}>
-                    <Typography
-                        variant="h5"
-                    >
-                        Get in touch
-                    </Typography>
-                </Box>
-
+                <Emailcont />
                 <ContBox />
 
             </Box >

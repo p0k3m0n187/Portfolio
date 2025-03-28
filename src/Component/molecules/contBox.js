@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import ContContainer from '../atom/contContainer';
-import emailIMG from '../../Images/Email.png';
 import phoneIMG from '../../Images/phone.png';
 import pesbokIMG from '../../Images/Facebook.png';
 import lingIMG from '../../Images/LinkedInPhoto.png';
@@ -14,14 +13,9 @@ function ContBox() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                gap: 2
+                gap: 1
             }}
         >
-            <ContContainer
-                img={emailIMG}
-                description='registrado187@gmail.com'
-                delay={0}
-            />
             <ContContainer
                 img={phoneIMG}
                 description='(+63)908-384-7982'
