@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 
 const textfieldStyle = {
     borderRadius: '5px', // Optional: Round corners for better design
-    background: 'white',
+    // background: 'white',
     boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
     backdropFilter: 'blur(20px)',
     WebkitBackdropFilter: 'blur(20px)',
